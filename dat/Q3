@@ -1,0 +1,90 @@
+# CMT309 - CMT314 2021-2022 Coursework Q1 Test Code
+# Oktay Karakus, PhD
+# *******************************************************************
+def do_arithmetic(a, b, op):
+    '''
+    1) Please copy and pass your codes for do_arithmetic() function below.
+    2) Do required changes in function definition for the arguments if needed.
+    '''
+    if op == "add" or op == "+":
+        return a+b
+    elif op == "subtract" or op == "-":
+        return a-b   
+    elif op == "multiply" or op == "*":
+        return a*b   
+    elif op == "divide" or op == "/":
+        if b!=0:
+            return a/b   
+        else:
+            return None
+    pass
+
+def sum_of_digits(num):
+    '''
+    1) Please copy and pass your codes for sum_of_digits() function below.
+    2) Do required changes in function definition for the arguments if needed.
+    '''
+
+    add = 0
+    n = list(num)
+    for i in n:
+        try:
+            add = add + int(i)
+        except:
+            pass
+    return add
+
+### --- IMPORTANT: DO NOT REMOVE OR CHANGE THE CODE BELOW ---
+if __name__ == '__main__':
+    testcases = {'do_arithmetic': [(24, -7, 'add'), (6, 6, 'multiply'), (4, 0, '/'), (3, 9, '-')],
+    'sum_of_digits':[("123",), ("we10a20b",), ("united",), ("",)]}
+
+    print('\n-- do_arithmetic testcases --')
+    for args in testcases['do_arithmetic']:
+        print('input:', str(args))
+        print('output:', do_arithmetic(*args))
+        print('-----------')
+
+    print('\n-- sum_of_digits testcases --')
+    for args in testcases['sum_of_digits']:
+        print('input:', str(args))
+        print('output:', sum_of_digits(*args))
+        print('-----------')
+
+### --- The outputs of test cases are given below. Please compare with your results.
+# ************************************************************************************
+# -- do_arithmetic testcases --
+# input: (24, -7, 'add')
+# output: 17.0
+# -----------
+# input: (6, 6, 'multiply')
+# output: 36.0
+# -----------
+# input: (4, 0, '/')
+# Division by 0!
+# output: None
+# -----------
+# input: (3, 9, '-')
+# output: -6.0
+# ----------
+#
+# -- sum_of_digits testcases --
+# input: ('123',)
+# The sum of digits operation performs 1+2+3
+# The extracted non-digits are:  []
+# output: 6
+# -----------
+# input: ('we10a20b',)
+# The sum of digits operation performs 1+0+2+0
+# The extracted non-digits are:  ['w', 'e', 'a', 'b']
+# output: 3
+# -----------
+# input: ('united',)
+# The sum of digits operation could not detect a digit!
+# The returned input letters are:  ['u', 'n', 'i', 't', 'e', 'd']
+# output: 0
+# -----------
+# input: ('',)
+# Empty string entered!
+# output: 0
+# -----------
