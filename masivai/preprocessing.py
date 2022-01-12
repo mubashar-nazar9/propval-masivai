@@ -361,22 +361,22 @@ if __name__ == "__main__":
 #     )
 ####################################################
 ###without glue job####
-    properties = pd.read_csv(
-        f"{base_dir}/input/properties.csv"
-    )
+#     properties = pd.read_csv(
+#         f"{base_dir}/input/properties.csv"
+#     )
     
 
-    cities = pd.read_csv(
-        f"{base_dir}/input/cities.csv"
-    )
+#     cities = pd.read_csv(
+#         f"{base_dir}/input/cities.csv"
+#     )
     
     
-    areas = pd.read_csv(
-        f"{base_dir}/input/areas.csv"
-    )
+#     areas = pd.read_csv(
+#         f"{base_dir}/input/areas.csv"
+#     )
     
     p = Preprocessor(None)
-    sale, rent = p.preprocess_listings_data(properties, areas, cities)
+#     sale, rent = p.preprocess_listings_data(properties, areas, cities)
 ############################################################
 
 ############################################
